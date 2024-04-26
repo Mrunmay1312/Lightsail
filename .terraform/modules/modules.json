@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"dev_env","Source":"./modules/lightsail","Dir":"modules/lightsail"},{"Key":"prod_env","Source":"./modules/lightsail","Dir":"modules/lightsail"},{"Key":"test_env","Source":"./modules/lightsail","Dir":"modules/lightsail"}]}

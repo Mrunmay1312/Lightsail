@@ -46,29 +46,50 @@ sudo tee "$html_file" > /dev/null <<EOL
             padding: 0;
             text-align: center;
             font-family: Arial, sans-serif;
+            background-color: #f4ebf0; /* Set background color */
         }
 
-        .header {
-            background: linear-gradient(to right, ##e20074, #f4ebf0); /* Gradient background color */
+        .header { 
+            background: white
             padding: 20px;
         }
 
+        #logo-container {
+            background-color: white; /* Set background color of logo container to white */
+            padding: 10px; /* Add padding to create space around the logo */
+            display: inline-block; /* Ensure the container wraps around the logo */
+            margin-top: 20px; /* Add margin to the top */
+        }
+
         #logo {
-            width: 150px; /* Adjust the width to make the logo smaller */
+            width: 300px; /* Adjust the width of the logo */
             height: auto;
         }
 
         h1 {
             margin: 30px 0; /* Add top margin to shift the h1 element down */
+			linear-gradient(to right, #ffffff, #ffffff); /* Gradient background color */
+        }
+		h3 {
+            font-weight: bold; /* Make the text within <p> elements bold */
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <img id="logo" src="https://miro.medium.com/v2/resize:fit:3200/1*QiHBlwnNjmRVnF7EiVsviQ.jpeg"
+        <div id="logo-container">
+            <img id="logo" src="https://miro.medium.com/v2/resize:fit:3200/1*QiHBlwnNjmRVnF7EiVsviQ.jpeg">
+        </div>
     </div>
-    <h1>This is from AWS Lightsail"
-    <p>Welcome to our website. We are glad to have you here!</p>
+    <h1>This is from AWS Lightsail</h1>
+	
+    <h2>Welcome to our website. We are glad to have you here!</h2>
+	<h3> Group No - 15 </h3>
+	<p> Mrunmay Nandanwar </p>
+	<p> Archita Nawale </p>
+	<p> Lavanya K </p>
+	<p> Sushma K R </p>
+	<p> Shweta Jadhav </p>
     <p>Hostname: $hostname</p>
 </body>
 </html>

@@ -9,7 +9,7 @@ resource "aws_lightsail_instance" "instances" {
 
   tags = {
 
-    Name = "${var.instance_name}-${count.index + 1}-instance"
+    Name = "${var.instance_name}-instance"
   }
   user_data = file("${path.root}/user_data.sh")
 }
