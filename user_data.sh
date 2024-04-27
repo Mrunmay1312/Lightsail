@@ -40,6 +40,7 @@ sudo tee "$html_file" > /dev/null <<EOL
 <html>
 <head>
     <title>Hello Everyone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
             margin: 0;
@@ -48,30 +49,76 @@ sudo tee "$html_file" > /dev/null <<EOL
             font-family: Arial, sans-serif;
             background-color: #f4ebf0; /* Set background color */
         }
-
-        .header { 
-            background: white
+ 
+        .header {
+            background: #ff6b6b; /* Change header background color */
             padding: 20px;
         }
-
+ 
         #logo-container {
             background-color: white; /* Set background color of logo container to white */
             padding: 10px; /* Add padding to create space around the logo */
             display: inline-block; /* Ensure the container wraps around the logo */
-            margin-top: 20px; /* Add margin to the top */
+            border-radius: 10px; /* Add border radius for a rounded look */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+            animation: pulse 2s infinite; /* Add pulse animation */
         }
-
+       
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+ 
         #logo {
             width: 300px; /* Adjust the width of the logo */
             height: auto;
+            border-radius: 10px; /* Add border radius for a rounded look */
         }
-
+ 
         h1 {
-            margin: 30px 0; /* Add top margin to shift the h1 element down */
-			linear-gradient(to right, #ffffff, #ffffff); /* Gradient background color */
+            margin: 15px 0; /* Add top margin to shift the h1 element down */
+            background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background color */
+            -webkit-background-clip: text; /* Apply text gradient */
+            -webkit-text-fill-color: transparent; /* Hide original text color */
+            animation: slide-in 2s ease-out; /* Add slide-in animation */
         }
-		h3 {
+       
+        @keyframes slide-in {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+ 
+        .icon {
+            width: 50px;
+            height: auto;
+            margin: 10px;
+            animation: spin 2s linear infinite; /* Add spin animation */
+        }
+       
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+ 
+        h3 {
             font-weight: bold; /* Make the text within <p> elements bold */
+        }
+        p {
+            margin: 5px 0; /* Add margin to paragraphs for better spacing */
         }
     </style>
 </head>
@@ -82,15 +129,24 @@ sudo tee "$html_file" > /dev/null <<EOL
         </div>
     </div>
     <h1>This is from AWS Lightsail</h1>
-	
+   
     <h2>Welcome to our website. We are glad to have you here!</h2>
-	<h3> Group No - 15 </h3>
-	<p> Mrunmay Nandanwar </p>
-	<p> Archita Nawale </p>
-	<p> Lavanya K </p>
-	<p> Sushma K R </p>
-	<p> Shweta Jadhav </p>
+    <h3> Group No - 15 </h3>
+    <p> Mrunmay Nandanwar </p>
+    <p> Archita Nawale </p>
+    <p> Lavanya K </p>
+    <p> Sushma K R </p>
+    <p> Shweta Jadhav </p>
     <p>Hostname: $hostname</p>
+ 
+    <!-- Additional images related to AWS and AWS Lightsail -->
+    <img src="https://www.logo.wine/a/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.svg" alt="AWS Logo" width="150">
+   <br>
+ 
+    <!-- Add some animated icons -->
+    <i class="fas fa-heart"></i> <!-- Example of a solid heart icon -->
+    <i class="far fa-envelope"></i> <!-- Example of a regular envelope icon -->
+    <i class="fab fa-twitter"></i> <!-- Example of a Twitter icon from the brands set -->
 </body>
 </html>
 EOL
